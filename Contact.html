@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="Contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+	<title>Contact form</title>
+    <script
+        src="https://kit.fontawesome.com/64d58efce2.js"
+        crossorigin="anonymous"></script>
+    </script>
+</head>
+<body>
+    <div class="container">
+        <span class="big-circle"></span>
+        <span class="big-circle-1"></span>
+        <div class="form">
+            <div class="contact-info">
+                <h3 class="title">Let's get in touch</h3>
+                <p class="text">
+                    Have any inquiries or need support? Fill out the form, and our team will reach out to you shortly.
+                </p>
+                <div class="info">
+                    <div class="information">
+                        <i class="fas fa-map-marker-alt icon"></i> 
+                        <p>92 Street 5, America</p> 
+                    </div>
+                    
+                        <div class="information">
+                            <i class="fas fa-envelope icon"></i> 
+                            <p>contactus12@contact.com</p> 
+                        </div>
+                      
+                            <div class="information">
+                                <i class="fas fa-phone icon"></i> 
+                                <p>123-876-089</p> 
+                            </div>
+                </div>
+                <div class="social-media">
+                    <p>Contact with us:</p>
+                    <div class="social-icon">
+                        <a href="#">
+                            <i class="fab fa-facebook-f"></i> 
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-instagram"></i> 
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-twitter"></i> 
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-linkedin-in"></i> 
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-github"></i> 
+                        </a>
+                    </div>
+                </div>
+            </div>
+                <div class="contact-form">
+                    <span class="circle one"></span>
+                <span class="circle two"></span>
+
+                <form action="Contact.html" >
+                    <h3 class="title">
+                        Contact Us
+                    </h3>
+                    <div class="input-container ">
+                        <input type="text" name="name" class="input" required>
+                        <label for="">Username</label>
+                        <span>Username</span>
+                    </div>
+                    <div class="input-container">
+                        <input type="email" name="email" class="input" required>
+                        <label for="">Email</label>
+                        <span>Email</span>
+                    </div>
+                    <div class="input-container">
+                        <input type="tel" name="phone" class="input" required>
+                        <label for="">PhoneNumber</label>
+                        <span>PhoneNumber</span>
+                    </div>
+                    <div class="input-container textarea ">
+                        <textarea  name="message" class="input"></textarea>
+                        <label for="">Message</label>
+                        <span>Message</span>
+                    </div>
+                    <input type="submit" value="Send" class="btn"/>
+                </form>
+                </div>
+           
+        </div>
+    </div>
+    <script>
+        const inputs = document.querySelectorAll(".input")
+
+        function focusfunc(){
+            let parent=this.parentNode;
+            parent.classList.add("focus");
+
+        }
+        function blurfunc(){
+            let parent=this.parentNode;
+            if(this.value=="")
+        {
+            parent.classList.remove("focus");
+        }
+            
+
+        }
+        inputs.forEach((input)=>{
+            input.addEventListener("focus", focusfunc);
+            input.addEventListener("blur", blurfunc);
+        })
+    </script>
+    </body>
+    </html>
